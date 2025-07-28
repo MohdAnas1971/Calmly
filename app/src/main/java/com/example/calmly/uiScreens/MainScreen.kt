@@ -24,7 +24,7 @@ import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -37,21 +37,17 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.calmly.R
-import com.example.calmly.ui.theme.CharcoalBlack
 import com.example.calmly.ui.theme.CloudWhite
 import com.example.calmly.ui.theme.DesaturatedBlue
-import com.example.calmly.ui.theme.DesaturatedBlueDark
-import com.example.calmly.ui.theme.SoftWhite
 import com.example.calmly.uiScreens.components.SoundCardList
 import com.example.calmly.viewmodel.MainViewModel
 
 
-
 @Composable
  fun MainScreen(viewModel: MainViewModel, navController: NavHostController) {
-    val selectedTab = remember { mutableStateOf(0) }
+    val selectedTab = remember { mutableIntStateOf(0) }
 
-    val tabs = listOf("Main","Meditation", "Sleep",)
+    val tabs = listOf("Main", "Meditation", "Sleep")
     Scaffold(
 
         bottomBar ={
@@ -63,13 +59,13 @@ import com.example.calmly.viewmodel.MainViewModel
                     .navigationBarsPadding()
             ) {
                 TabRow(
-                    selectedTabIndex = selectedTab.value,
+                    selectedTabIndex = selectedTab.intValue,
                     containerColor = CloudWhite,
                     ) {
                     tabs.forEachIndexed { index, title ->
                         Tab(
-                            selected = selectedTab.value == index,
-                            onClick = { selectedTab.value = index },
+                            selected = selectedTab.intValue == index,
+                            onClick = { selectedTab.intValue = index },
                             text = { Text(title) }
                         )
                     }
@@ -79,10 +75,10 @@ import com.example.calmly.viewmodel.MainViewModel
         modifier = Modifier.fillMaxSize()
     ) { innerPadding ->
 
-            when (selectedTab.value) {
+            when (selectedTab.intValue) {
                 0 -> ContentLazyList(innerPadding,viewModel)
-                1 -> MeditationScreen(viewModel, navController)
-                2 -> SleepScreen(viewModel, navController)
+                1 -> MeditationScreen(viewModel)
+                2 -> SleepScreen(viewModel)
             }
     }
 }
@@ -183,6 +179,7 @@ fun CategoryCard(imResId: Int, name:String) {
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize()
         )
+        Text(name, style = MaterialTheme.typography.bodyLarge)
     }
 
 }

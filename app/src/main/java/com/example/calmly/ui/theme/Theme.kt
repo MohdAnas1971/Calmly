@@ -1,6 +1,5 @@
 package com.example.calmly.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -10,11 +9,6 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
-
-import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.Typography
-import androidx.compose.material3.Shapes
-
 
 
 private val DarkColorScheme = darkColorScheme(
@@ -65,7 +59,7 @@ fun CalmlyTheme(
 
 
 
-// Theme.kt
+/*// Theme.kt
 private val DarkColorPalette = darkColorScheme(
     primary = DesaturatedBlue,
     secondary = SlateGray,
@@ -75,9 +69,9 @@ private val DarkColorPalette = darkColorScheme(
     onSecondary = CloudWhite,
     onBackground = SoftWhite,
     onSurface = SoftWhite
-)
+)*/
 
-@Composable
+/*@Composable
 fun MistyMountainTheme(content: @Composable () -> Unit) {
     MaterialTheme(
         colorScheme = DarkColorPalette,
@@ -85,4 +79,4 @@ fun MistyMountainTheme(content: @Composable () -> Unit) {
         shapes = Shapes(),
         content = content
     )
-}
+}*/

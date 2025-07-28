@@ -20,7 +20,7 @@ import kotlinx.coroutines.delay
 @Composable
 fun AutoSlidingImageRow(sounds: List<Sound>) {
     val listState = rememberLazyListState()
-    val coroutineScope = rememberCoroutineScope()
+   // val coroutineScope = rememberCoroutineScope()
 
     LaunchedEffect(key1 = listState) {
         while (true) {

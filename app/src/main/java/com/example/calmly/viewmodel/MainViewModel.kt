@@ -1,25 +1,20 @@
 package com.example.calmly.viewmodel
 
 
+import android.app.Application
+import android.content.Intent
+import android.media.MediaPlayer
+import android.util.Log
+import androidx.core.content.ContextCompat
+import androidx.lifecycle.AndroidViewModel
 import com.example.calmly.data.Sound
 import com.example.calmly.data.SoundRepository
-import kotlin.coroutines.coroutineContext
-import android.app.Application
-import android.media.MediaPlayer
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.viewModelScope
+import com.example.calmly.utils.MusicService
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.GlobalScope.coroutineContext
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.launch
 import javax.inject.Inject
-import android.content.Context
-import android.content.Intent
-import android.util.Log
-import androidx.core.content.ContextCompat
-import com.example.calmly.utils.MusicService
 
 @HiltViewModel
 class MainViewModel @Inject constructor(application: Application) : AndroidViewModel(application) {

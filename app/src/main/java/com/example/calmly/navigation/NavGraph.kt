@@ -25,11 +25,11 @@ fun CalmlyNavGraph() {
         }
 
         composable("SleepScreen"){
-            SleepScreen(viewModel = viewModel,navController )
+            SleepScreen(viewModel = viewModel)
         }
 
         composable("MeditationScreen"){
-            MeditationScreen(viewModel = viewModel,navController)
+            MeditationScreen(viewModel = viewModel)
         }
     }
 }
