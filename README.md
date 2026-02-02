@@ -1,13 +1,10 @@
 
 <p align="center">
 <img width="1536" height="1024" alt="calmly_banner" src="https://github.com/user-attachments/assets/f151cd03-ca4e-416a-a493-6b38b9ceb6c9" />
-  <h1 align="center">One Coffee Compose</h1>
+  <h1 align="center"> Calmly</h1>
   <p align="center">
-    A modern Coffee Ordering Android application built with Kotlin, Jetpack Compose, and MVVM architecture.
+ A clean, minimal Android app for meditation and sleep, designed to help users relax with soothing ambient sounds and sleep noises. Built as an internship assignment with a focus on modern Android practices, media playback, and an immersive user experience.
   </p>
-
-## Calmly – Minimalist Meditation + Sleep Sounds App
-A clean, minimal Android app for meditation and sleep, designed to help users relax with soothing ambient sounds and sleep noises. Built as an internship assignment with a focus on modern Android practices, media playback, and an immersive user experience.
 
 ## 🎯 Objective
 To develop a fully functional Android application that enables users to:
