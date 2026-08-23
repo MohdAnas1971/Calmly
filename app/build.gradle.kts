@@ -9,14 +9,14 @@ plugins {
 }
 
 android {
-    namespace = "com.calmlyapp.android"
+    namespace = "com.calmly_example.calmly"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.calmlyapp.official"
+        applicationId = "com.calmly_example.calmly"
         minSdk = 29
         targetSdk = 35
-        versionCode = 4
+        versionCode = 5
         versionName = "2.05"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
