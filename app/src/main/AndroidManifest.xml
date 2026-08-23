@@ -7,7 +7,7 @@
 
     <application
         android:allowBackup="true"
-        android:name=".CalmlyApp"
+        android:name="com.calmlyapp.android.CalmlyApp"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -28,7 +28,7 @@
         </activity>
 
         <service
-            android:name=".utils.MusicService"
+            android:name=".service.MusicService"
             android:exported="false"
             android:foregroundServiceType="mediaPlayback" />
     </application>
